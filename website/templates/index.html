@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="headerimg">
+    <p>thebetterKtm</p>
+    <h2>Let's build a better Kathmandu, together!</h2>
+    <!-- {% load static %}
+<img src="{% static 'website/textimg.png' %}"> -->
+</div>
+
+<div class="container">
+    <div class="solutions">
+        
+        <div id="successmessage"></div>
+        <h1 class="block_title">Active Ideas</h1>
+        {% for item in all_p %}
+        
+            <div class="solution">
+                {% load static %}
+                
+                <div class="voting">
+                    <a id="{{item.id}}" class="solanchor">
+                    {% csrf_token %}
+                        <!-- <button id="vote-button" value="{{item.id}}"> -->
+                            <span id="vote_c" class="vote_counter">
+                                <img src="{% static 'website/voteicon.png' %}">
+                            
+                                
+                            </span>
+                        <!-- </button> -->
+                    </a>  
+                    <p id="vote_count_{{item.id}}">{{item.upvote}}</p> 
+                </div>
+
+                <p class="main_idea">
+                <span class="hello"><strong>{{item.subject}}</strong></span><br>
+                {{item.problemtext}}<br><br class='anonybreak'>
+                <!-- {{item.id}} -->
+                {% if not item.anonymity %}
+                    <b>By:</b> {{item.name}}
+                {% else %}
+                    <b>By:</b> Anonymous
+                {% endif %}
+            
+                </p>
+</a>
+            </div>
+        
+        <!-- {{item.upvote}} -->
+        <!-- <form method="POST" action="" id="upvote-form">
+            {% csrf_token %}
+            <input type="submit" class="form_control" id="upvote-button" value="{{ item.id }}" name=item.id > -->
+        {%endfor%}
+    </div>
+
+    <div class="add_S">
+        <h1 class="block_title">Post your Ideas here!</h1>
+        <form method="POST" action="" id="submit_form">
+            {% csrf_token %}
+            <div class="from_group">
+                <input type="text" id="name" placeholder="Full Name" name="name" class="input_class" required><br><br>
+                <input type="email" id="emailid" placeholder="Email ID" name="emailid" class="input_class" required><br><br>
+                <input type="integer" id="number" placeholder="Phone Number" name="number" class="input_class" required><br><br>
+                <input type="text" id="subject" placeholder="Subject" name="subject" class="input_class" required><br><br>
+                <textarea id="problemtext" placeholder="Idea :" name="problemtext" class="input_class" required></textarea><br>
+                <div class="anonymity">
+                <input type="checkbox" id="anonimity" class="box_anonymity" name="anonymity"><span class="anonymity_Text">Stay Anonymous?</span>
+                </div>
+                <button type="submit" class="submitbtn">Done!</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+    
+    <!-- {% if messages %}
+    <div class="alert alert-success alert-dismissible">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %} -->
+{% endblock %}
+<!-- <div class="add">
+    <centre>
+    <h1>Post an issue</h1>
+    <form method="POST" action="{% url 'addP' %}">
+
+        <div class="from_group">
+            <input type="text" class="form_control" placeholder="Full Name" name="name"><br><br>
+            <input type="email" class="form_control" placeholder="Email ID" name="emailid"><br><br>
+            <input type="integer" class="form_control" placeholder="Phone Number" name="number"><br><br>
+            <input type="text" class="form_control" placeholder="Subject" name="subject"><br><br>
+            <input type="text" class="form_control" placeholder="Issue:" name="problemtext"><br><br>
+            <input type="checkbox" class="form-check-input" name="anonymity"><br><br>
+        </div>
+        <button type="submit" class="submitbtn">Submit</button>
+    </form>
+</centre>
+</div> -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title></title>
+        {% load static %}
+        <link type="text/css" rel="stylesheet" href="{% static 'website/css/style.css' %}">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marcellus">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap">
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+    <script type="text/javascript">
+        $(document).on('click', '.solanchor', handleClick)
+        function handleClick(e) {
+            var newData = $(this).attr('id'),
+            url = "{% url 'solution-pg' 1 %}".replace('1', newData);
+            $.ajax({
+                type:'POST',
+                hello: newData,
+                url: url, 
+                data:{
+                    solid: $(this).attr('id'),
+                    csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                },
+                success: function (json) {
+                    newid = "vote_count_" + newData
+                    document.getElementById(newid).innerHTML = json['count']
+                },
+                error: function(xhr, errmsg, err){}
+            });
+        };
+    </script>
+
+    
+    </html>

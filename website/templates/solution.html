@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .container{
+        margin-top: -24px;
+        margin-left: -109px;
+        margin-right: -109px;
+        margin-bottom: -10px;
+        height: 100vh;
+        background-color: #f3ffee;
+    }
+    .content {
+        margin: auto;
+        width: 1000px;
+        height: 100%;
+        background-color: #c2ffa8;
+        justify-content: center;
+        border-radius: 50px;
+        vertical-align: center;
+    }
+
+    .actual_content{
+        margin-top: 80px;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        vertical-align: center;
+    }
+
+    .actual_content h1{
+        vertical-align: center;
+        font-weight: 1000;
+        font-size: 40px;
+        margin-bottom: 8px;
+        color: #003893;
+    }
+
+    .by_text {
+        font-weight: 800;
+        margin: 0;
+        font-size: 18px;
+        color: #DC143C;
+    }
+
+    .by_probtxt {
+        margin: auto;
+        justify-content: center;
+        width: 650px;
+        text-align: justify;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    #vote-button {
+        border: none;
+        outline: none;
+        width: 120px;
+        height: 30px;
+        border-radius: 12px;
+        margin-top: 18px;
+        background-color: #003893;
+        vertical-align: center;
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+    }
+
+    #vote-button:hover {
+        background-color: #0051d3;
+    }
+</style>
+    <!-- <centre>
+        <div class="container">
+            <div class="content">
+                <div class="actual_content">
+                    <h1>{{ solution }}</h1>
+                    <p class="by_text">By: {{ solution.name}}</p><br><br>
+                    <p class="by_probtxt">{{ solution.problemtext }}</p><br>
+                    <b>Total Votes: </b><span id="vote-count">{{ solution.upvote }}</span><br>
+                    {% csrf_token %}
+                    <button id="vote-button" value="{{ solution.id }}">Vote this idea!</button>
+                 </div>
+            </div>
+        </div>
+
+    </centre> -->
+
+
+
+
+{% endblock %}

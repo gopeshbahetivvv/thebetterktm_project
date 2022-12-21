@@ -1,0 +1,320 @@
+body {
+    margin:0;
+    background-image: url("/static/website/bgcopy.png");
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    /* display: flex; */
+}
+
+.solutions {
+    width:60%;
+    font-family: sans-serif;
+}
+
+.solanchor {
+    text-decoration:double;
+    color:inherit;
+}
+.add_S {
+    align-self: left;
+    font-family: 'Nunito', sans-serif;
+    left: 70%;
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+    height: 100vh;
+
+}
+/* 
+#upvote-button {
+    color: rgba(102, 51, 153, 0);
+}
+ */
+.container {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 109px;
+    margin-right: 109px;
+}
+
+.headerimg {
+    margin:0;
+    justify-content: center;
+    text-align: center;
+}
+
+.headerimg p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 348%;
+    font-weight: 300;
+    color: #003893;
+    margin: 0px;
+    /* margin-left: 100px; */   
+}
+
+.headerimg h2 {
+    color:#DC143C;
+    margin: 0px;
+    font-family: "Allura";
+    font-size: 32px;
+    margin-bottom: 18px !important;
+}
+.solution {
+    width: 100%;
+    height: auto;
+    background-color: #8BFF59;
+    margin-bottom: 16px;
+    border-radius: 35px;
+    /* margin-left: auto;
+    margin-right: auto;
+    text-align: center; */
+    vertical-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    font-family: 'Nunito', sans-serif;
+    padding-left: 30px;
+}
+
+/* .solution:hover {
+    background-color: #a3ff7b;
+} */
+
+.solution .main_idea {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 24px;
+    margin-right: 22px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    text-align: left;
+    justify-content: left;
+    color: #002053;
+}
+
+.solution img{
+    width: 28px;
+    height: auto;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 0, 0)) saturate(1000%);
+}
+
+.solution img:hover{
+    filter: opacity(1);
+}
+.vote_counter{
+    margin: auto;
+    vertical-align: center;
+    padding: 0px;
+    width: 40px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+.voting{
+    margin: auto;
+    vertical-align: center;
+    padding: 0px;
+    width: 40px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+.successmessage {
+    display: none;
+}
+.voting p{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+    color: #002258;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    width: 100%;
+}
+#submit_form {
+    align-self: center;
+    justify-content: center;
+    margin-left: 0px;
+    vertical-align: center;
+    color: #ffff;
+}
+
+.input_class {
+    justify-content: center;
+    border:0;
+    outline: 0;
+    padding: 12px;
+    padding-left: 20px !important;
+    margin-bottom: -1.5px;
+    background-color: #008037;
+    /* text-shadow: 1px 1px 0 white; */
+    width: 285px;
+    border-radius: 30px;
+    color: #ffff;
+    box-shadow: inset;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.6;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    
+}
+
+.hello {
+    font-size: 17px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 150px;
+    min-height: 100px;
+}
+
+#problemtext {
+    height: 100px;
+}
+
+.block_title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 21.5px;
+    text-align: center;
+    color: #002053;
+    margin-bottom: 4px;
+}
+
+.submitbtn {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    justify-self: center;
+    display:flex;
+    outline: none;
+    border: 0;
+    padding: 5px;
+    width: 36%;
+    border-radius: 10px;
+    background-color:#8bff5979;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 1000;
+    color: #002053;
+}
+
+.submitbtn:hover {
+    background-color:#8BFF59;
+}
+.anonymity {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+.box_anonymity {
+    /* display: flex;*/
+    margin: 0;
+    padding: 0px !important;
+    width: 15px;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    /*justify-content: center;
+    justify-self: center; */
+}
+
+.anonymity_Text{
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color:#002053;
+}
+
+.anonybreak {
+    display: block;
+    content: "";
+    margin: 10px 0;
+    line-height: 25px;
+}
+
+/* Compaitibility */
+
+@media (max-width: 418px){
+
+    body {
+        
+        overflow-x: hidden;
+        /* display: flex; */
+        background-image: none;
+    }
+    
+    
+    .headerimg p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 58px;
+        font-weight: 1800;
+        color: #003893;
+        margin: 0px;
+        /* margin-left: 100px; */   
+    }
+
+    .headerimg h2 {
+        color:#DC143C;
+        margin: 0px;
+        font-family: "Allura";
+        font-size: 24px;
+        margin-bottom: 18px !important;
+    }
+
+    .container {
+        margin-top: 22px;
+        margin-left: 34px;
+        margin-right: 34px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .add_S {
+        align-self: left;
+        font-family: 'Nunito', sans-serif;
+        left: 0%;
+        position:relative;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .solutions {
+        width:90%;
+        font-family: sans-serif;
+    }
+
+    
+    .input_class {
+        justify-content: center;
+        border:0;
+        outline: 0;
+        padding: 12px;
+        padding-left: 20px !important;
+        margin-bottom: -1.5px;
+        background-color: #008037;
+        /* text-shadow: 1px 1px 0 white; */
+        width: 285px;
+        border-radius: 30px;
+        color: #ffff;
+        box-shadow: inset;
+    }
+}
+
+
+/* .form_group{
+    
+} */
